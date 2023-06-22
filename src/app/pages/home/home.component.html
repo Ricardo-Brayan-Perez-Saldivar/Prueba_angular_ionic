@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <app-header></app-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 50px; padding: 10px;">
+    <p>
+      home!!!
+    </p>
+
+    <!-- <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Hic libero omnis ad quasi? Voluptate aliquid cum quo hic tempora 
+      magnam debitis illum dicta, blanditiis, adipisci reprehenderit ad 
+      eaque reiciendis! Enim.
+    </p> -->
+    <!-- <app-servicios [pageName]="nomPagina" [serviciosEnable]="enable" [servicios]="serviciosDate"></app-servicios> -->
+    <!-- <app-calculadora [numero1]="10" [numero2]="20" (resultado)="operacion($event)"></app-calculadora> -->
+
+    <!-- <ion-item color="primary" *ngIf="resultadoHome != 0">
+      <ion-label>El resultado es {{resultadoHome}}</ion-label>
+    </ion-item>
+     -->
+
+  </div>
+
+  <!-- 
+  <ion-item>
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input placeholder="Introduce un nombre valido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Edad:</ion-label>
+    <ion-input type="number" placeholder="Introduce tu edad"></ion-input>
+  </ion-item> -->
+  <ion-card>
+    <ion-item class="itemInput">
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input placeholder="Ingresa tu nombre" [(ngModel)]="newUser.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item class="itemInput">
+      <ion-label position="floating">Edad:</ion-label>
+      <ion-input type="number" placeholder="Ingresa tu edad" [(ngModel)]="newUser.edad"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-item class="itemInput">
+        <ion-label>Sexo:</ion-label>
+
+        <ion-select aria-label="Sexo:" placeholder="Sexo:" [(ngModel)]="newUser.sexo">
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Femenino">Femenino</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-item class="itemInput">
+      <ion-label position="floating">Cedula:</ion-label>
+      <ion-input placeholder="Ingresa tu Cedula" [(ngModel)]="newUser.cedula"></ion-input>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-grid fixed>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-button class="itemInputButton" (click)="adUsuario()">
+          Añadir usuario
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+</ion-content>

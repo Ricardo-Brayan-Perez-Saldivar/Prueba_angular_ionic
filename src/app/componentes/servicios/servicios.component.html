@@ -1,0 +1,23 @@
+
+<h2>Estamos en la pagina: {{pageName}}</h2>
+
+
+<div *ngIf="serviciosEnable">
+  <ion-card>
+    <ion-card-content>
+      <div *ngFor="let servicio of servicios">
+        <h1>{{servicio.nombre}}</h1>
+        <p>{{servicio.descripcion}}</p>
+        <p>{{servicio.autor}}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+<div *ngIf="!serviciosEnable"> 
+  <div *ngFor="let contacto of contactos">
+    <h1>{{contacto.nombre}}</h1>
+    <p>{{contacto.correo}}</p>
+    <p>{{contacto.celular}}</p>
+  </div>
+</div>

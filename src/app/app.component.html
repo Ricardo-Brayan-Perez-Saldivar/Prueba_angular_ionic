@@ -1,3 +1,83 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <app-header></app-header>
+  </ion-toolbar>
+</ion-header> -->
+
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-split-pane contentId="main" when="(min-width: 1500px)">
+
+    <ion-menu contentId="main" side="start" menuId="custom">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu Content</ion-title>
+          <ion-buttons slot="end">
+            <!-- <ion-button (click)="closeMenu()"> -->
+            <ion-button (click)="this.menu.close('custom')">
+              <ion-icon  slot="icon-only" color="dark" name="close-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list>
+          <ion-menu-toggle [routerLink]="['/home']">
+            <ion-item button lines="none"  detail>
+              <ion-label style="font-family: 'Raleway', sans-serif;">Home</ion-label>
+              <ion-icon class="iconMenu" name="home" slot="start"></ion-icon>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle [routerLink]="['/contactos']">
+            <ion-item button detail>
+              <ion-label>Contactos</ion-label>
+              <ion-icon class="iconMenu" name="accessibility" slot="start"></ion-icon>
+            </ion-item>
+          </ion-menu-toggle>
+          
+          <ion-menu-toggle [routerLink]="['/new_item']">
+            <ion-item button detail>
+              <ion-label>Nuevo Item</ion-label>
+              <ion-icon class="iconMenu" name="pricetag-outline" slot="start"></ion-icon>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu contentId="main" side="end" menuId="alterno">
+      <ion-header>
+        <ion-toolbar color="warning">
+          <ion-title>Sesion</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list>
+          <ion-item>
+            <ion-label>Home</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Contactos</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- <ion-header>
+      <ion-toolbar>
+        <app-header></app-header>
+      </ion-toolbar>
+    </ion-header> -->
+
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+  </ion-split-pane>
+
+
+  <!-- <app-header></app-header> -->
+  <!-- <ion-router-outlet></ion-router-outlet> -->
+  <!-- <app-footer></app-footer> -->
 </ion-app>

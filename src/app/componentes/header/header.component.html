@@ -1,0 +1,33 @@
+<!-- <ion-header>
+
+      <a routerLink="/home" style="padding: 10px 10px;">Home </a>
+      <a routerLink="/contactos" style="padding: 10px;">Contactos</a>
+
+</ion-header> -->
+
+<ion-header>
+      <ion-toolbar>
+            <!-- <ion-buttons slot="start">
+                  <ion-button>
+                        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+                  </ion-button>
+            </ion-buttons> -->
+            <ion-buttons slot="start">
+                  <ion-menu-button slot="icon-only" menu="custom"></ion-menu-button>
+            </ion-buttons>
+
+            <ion-buttons slot="end">
+                  <ion-button>
+                        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                  </ion-button>
+                  <ion-button>
+                        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+                  </ion-button>
+                  <ion-button (click)="openMenuEnd()">
+                        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </ion-button>
+            </ion-buttons>
+            
+            <ion-title>Header</ion-title>
+      </ion-toolbar>
+</ion-header>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <app-header></app-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 50px; padding: 10px;">
+    <p>
+      Nuevo Item!!!
+    </p>
+  </div>
+<!-- pendiente -->
+  <ion-card>
+    <ion-item class="itemInput">
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input [(ngModel)]="newItem.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item class="itemInput">
+      <ion-label position="floating">Descripcion:</ion-label>
+      <ion-input [(ngModel)]="newItem.descripcion"></ion-input>
+    </ion-item>
+    
+    <ion-item class="itemInput">
+      <ion-label position="floating">Categoria:</ion-label>
+      <ion-input [(ngModel)]="newItem.categoria"></ion-input>
+    </ion-item>
+
+    <ion-item class="itemInput">
+      <ion-label position="floating">Precio:</ion-label>
+      <ion-input  [(ngModel)]="newItem.precio"></ion-input>
+    </ion-item>
+    
+    <ion-item class="itemInput">
+      <ion-label position="floating">Stock:</ion-label>
+      <ion-input  type="number" [(ngModel)]="newItem.stock"></ion-input>
+    </ion-item>
+
+  </ion-card>
+
+
+  <ion-grid fixed>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-button class="itemInputButton" (click)="save()">
+          <ion-icon slot="icon-only" name="save-sharp"></ion-icon>
+          Añadir usuario
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+ 
+
+
+
+
+</ion-content>
